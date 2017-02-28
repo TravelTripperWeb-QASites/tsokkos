@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tsokkos Hotels &amp; Resorts | Hotels in Cyprus | Apartments in Cyprus | Ayia Napa Holidays | Hotel Weddings Cyprus | Accommodation in Cyprus</title>
+    <description>Tsokkos Hotels offers a wide range of accommodation with over 30 hotels, a tourist village and apartments to choose from. From five and four star luxurious guest rooms featuring every convenience to tasteful self-catering hotel apartments set in beautiful gardens, all of which are set on central beachfront locations.
+</description>
+    <link>http://www.tsokkos.com/</link>
+    <atom:link href="http://www.tsokkos.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 21 Jul 2016 16:13:29 +0530</pubDate>
+    <lastBuildDate>Thu, 21 Jul 2016 16:13:29 +0530</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+  </channel>
+</rss>

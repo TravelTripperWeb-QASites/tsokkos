@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html ng-app="protarasApp">
+
+  <head>
+
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tsokkos Hotels &amp; Resorts - Our Exclusive Hotels</title>
+  <meta name="description" content="Select you region and book our exclusive hotels. Over 30+ Hotels in 3 Unique Locations Protaras, Ayia Napa and Paphos.">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://www.tsokkos.com/region-listing">
+  <link rel="alternate" type="application/rss+xml" title="Tsokkos Hotels & Resorts | Hotels in Cyprus | Apartments in Cyprus | Ayia Napa Holidays | Hotel Weddings Cyprus | Accommodation in Cyprus" href="http://www.tsokkos.com/feed.xml">
+</head>
+
+
+  <body  ng-controller="protarasCtrl">
+ <div  
+    <div class="social-nav">
+   <ul>
+   <li><a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+   <li><a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></li>
+   <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+   <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+   </ul>
+   </div>
+   <header class="site-header"> 
+  <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img src="/images/logo.png" alt="Tossokos Hotel &amp; Resorts"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                      
+                      
+                      <li><a href=>Hotels</a></li>
+                      
+                      
+                      
+                      
+                      <li><a href=>Exclusive Offers</a></li>
+                      
+                      
+                      
+                      
+                      <li><a href=/hotels-in-paphos/>Location</a></li>
+                      
+                      
+                      
+                      
+                      <li><a href=>Plan an event</a></li>
+                      
+                      
+                      
+                      
+                      <li><a href=>Explore Cyprus</a></li>
+                      
+                      
+                      
+                      
+                      <li><a href=>Gallery</a></li>
+                      
+                      
+                      
+                      
+                      <li><a href=>Contact Us</a></li>
+                      
+                      
+                      
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav> 
+</header>
+
+
+<section class="top-sec" style="background-image: url('/images/region-lisiting-sea-banner.jpg');">
+   <div class="container no-padding">
+       <div class="breadcrumb-nav">  
+  
+            
+         
+          <ol class="breadcrumb">
+             <li><a href="">Home</a></li>
+             <li><a href="">Hotels</a></li>
+             <li class="active">Protaras</li>
+          </ol>
+       </div>
+
+      <div class="col-md-6 no-margin">
+         <img src="/images/map-region-paphos.jpg" alt="map region paphos" class="responsive-img">
+          
+      </div>
+      <div class="col-md-6 no-margin">
+         <div class="region-tab">
+                <ul class="clearfix nav nav-tabs" role="tablist">
+                    <li role="presentation"><a href="/hotels-in-paphos/">Paphos (2)</a></li>
+                    <li role="presentation"><a href="/hotels-in-ayianapa/">Ayia Napa (6)</a></li>
+                    <li class="active"  role="presentation"><a href="/hotels-in-protaras/">Protaras (19)</a></li>
+                </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane" id="paphos">
+                    <div class="details text-center">
+                       
+                       <p>Paphos thanks to its remarkable  
+        historical heritage is without doubt an open museum, and thus UNESCO has added the whole town to the list of the World Cultural Heritage.</p>
+        
+                       <div class="view-more">
+                         <a data-scroll href="#hotels">View Hotels in Paphos</a>
+                       </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="ayianapa">
+                    <div class="details text-center">
+                       <p>Ayia Napa detail here...</p>
+        
+                       <div class="view-more">
+                         <a data-scroll href="#hotels">View Hotels in Ayia Napa</a>
+                       </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane  active" id="protaras">
+                    <div class="details text-center">
+                       <p>Protaras detail here...</p>
+        
+                       <div class="view-more">
+                         <a data-scroll href="#hotels">View Hotels in Protaras</a>
+                       </div>
+                    </div>
+                </div>
+             </div>
+         </div>
+      </div>
+
+   </div> 
+</section>
+ 
+ 
+ <section id="hotels" class="scrollme">
+  <div class="container no-padding">
+   <div class="padd-36 text-center">
+      <h4 class="title-18">OUR EXCLUSIVE HOTELS </h4>
+      
+       <div ng-repeat="hotel in HotelLists | filter :  {address: {city : 'Protaras'}}  | orderBy: 'name' " class="row hotel-list grey-bg no-padding">
+         <div class="col-sm-6 col-md-4 no-padding no-margin">
+          <div class="image-wrap"><img  src="[[hotel.lead_photo.thumb_yankee_jumbo]]"  class="responsive-img" alt="tossokos ascos carol beach">
+          </div>
+         </div>
+         <div class="col-sm-6 col-md-8">
+             <div class="col-sm-12 col-md-7 no-padding no-margin text-left">
+               <div class="short-detail">
+               <h3> [[hotel.name]]</h3>
+                <p>[[hotel.description  | limitTo: 200]]...
+                </p>
+
+                <h3 class="contact">Contact</h3>
+                <p>+357-26621801
+                </p>
+               </div>
+             </div>
+             <div class="col-sm-12 col-md-5 no-padding no-margin text-center">
+                    <div class="btn-group-nav readon">
+                      <a href="/hotel/[[hotel.name | spaceDash]]" class="btn btn-primary">View This Hotel</a> 
+                      <a class="btn btn-primary">Book Now</a> 
+                    </div>
+             </div>
+         </div>
+       </div>
+ 
+
+
+   </div> 
+  </div>
+ </section>
+ 
+
+<section class="grey-bg">
+    <div class="container-fluid no-margin no-padding">
+               <div id="owl-gallery" class="owl-carousel owl-gallery">
+                <div class="item"><img class="lazyOwl" src="/images/region/gallery/slide1.jpg"  alt="Cottilion Room">
+                    <div class="caption">
+                      <h3 class="white-text">Welcome to Paphos</h3>
+                      <a class="btn btn-secondary" href="#">View Gallery</a> 
+                    </div>
+                </div>
+                <div class="item"><img class="lazyOwl" src="/images/region/gallery/slide2.jpg" alt="Garden Room">
+                    <div class="caption">
+                     <h3 class="white-text">Welcome to Paphos</h3>
+                      <a class="btn btn-secondary" href="#">View Gallery</a> 
+                    </div>
+                </div> 
+
+              </div>
+    </div>
+</section>
+
+<section>
+  <div class="container padd-60">
+    <div class="col-md-6 col-sm-6 text-center border-right">
+    <h2 class="carousel-heading">Plan Your Special Event</h2>
+    <div id="owl-demo" class="owl-carousel owl-prop">
+      <div class="item">
+      <img class="lazyOwl" src="/images/homepage/gallery/1.jpg"  alt="Cottilion Room">
+          <div class="caption">
+            <h3>ANMARIA BEACH HOTEL/
+Ayia Napa</h3>
+            <a class="btn btn-default" href="#">Explore Event</a>
+            <a class="btn btn-primary" href="#">Explore all Events</a>
+          </div>
+      </div>
+      <div class="item">
+      <img class="lazyOwl" src="/images/homepage/gallery/2.jpg" alt="Garden Room">
+          <div class="caption">
+            <h3>ANMARIA BEACH HOTEL/
+Ayia Napa</h3>
+            <a class="btn btn-default" href="#">Explore Event</a>
+            <a class="btn btn-primary" href="#">Explore all Events</a>
+          </div>
+      </div> 
+    
+    </div>
+
+    </div>
+    <div class="col-md-6 col-sm-6 text-center">
+    <h2 class="carousel-heading">Browse Special Offers</h2>
+    <div id="owl-demo2" class="owl-carousel owl-prop">
+    <div class="item"><img class="lazyOwl" src="/images/homepage/gallery/2.jpg" alt="Garden Room">
+          <div class="caption">
+            <h3>Early bookings discount/
+    summer special 2017</h3>
+            <a class="btn btn-default padd-25" href="#">View Offer</a>
+            <a class="btn btn-primary padd-25" href="#">View all offers</a>
+          </div>
+      </div> 
+      <div class="item"><img class="lazyOwl" src="/images/homepage/gallery/1.jpg"  alt="Cottilion Room">
+          <div class="caption">
+            <h3>Vrissiana beach hotel/
+    Protaras</h3>
+            <a class="btn btn-default padd-25" href="#">View Offer</a>
+            <a class="btn btn-primary padd-25" href="#">View all offers</a>
+          </div>
+      </div>
+      
+        </div>
+  </div>
+
+</section>
+ 
+
+    <footer class="footer">
+  <div class="container">
+
+    <div class="col-md-3">
+       
+       <h3>Tsokkos Hotels & Resorts</h3>
+       
+       <p>P.O.Box 30221, <br>5341 Ayia Napa,<br> Cyprus </p>
+    </div>
+    <div class="col-md-3"> 
+       <h3>Contact Details</h3> 
+       <p>T. (+357) 77 77 74 44</p>
+       <p>T. (+357) 97707444</p>
+       <p>F. (+357) 23 831 447</p>
+       <p>E. reservations@tsokkos.com</p>
+    </div>
+    <div class="col-md-3">
+        
+       <h3>Newsletter</h3> 
+       <div class="input-group">
+          <input type="text" class="form-control" placeholder="TYPE YOUR EMAIL" aria-describedby="basic-addon2">
+           <span class="input-group-addon">
+            <button  type="submit"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+          </span>
+           
+        </div>
+    </div>
+    <div class="col-md-3">
+       
+       <h3>Follow Us</h3> 
+       <p class="social">
+       <a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+       <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+       <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+       <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+       </p>
+    </div>
+  </div>
+
+</footer>
+
+<div class="copyright">
+ <div class="container">
+ © 2016 Tsokkos Hotels, All Rights Reserved |  <a href="">Privacy Policy</a>  |  <a href="">Press</a>  | <a href="">Terms of Use</a>  | <a href="">Sitemap</a> | <a href="">FAQ</a> 
+ </div>
+</div>
+   <script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/smooth-scroll.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/booking-widget.js"></script>
+<script src="/js/angular.min.js"></script>
+<script src="/js/angular-route.js"></script>
+<script src="/js/app.js" type="text/javascript"></script>
+
+
+
+ 
+
+
+  </body>
+
+</html>
